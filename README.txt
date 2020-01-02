@@ -1,5 +1,5 @@
 # 뽐뿌게시판 해피머니, 컬쳐랜드 제목 스크래퍼
-# 대사 단어 : 해피머니, 컬쳐랜드, 컬처랜드, 컬쳐, 컬처, 컬쳐캐쉬, 컬처캐쉬, happy, money, culture land, cash
+# 대사 단어 : 해피머니, 컬쳐랜드, 컬처랜드, happy, money, culture land, cash
 # Python 3.7 버전으로...
 
 # 매 1시간마다 정각 알림.

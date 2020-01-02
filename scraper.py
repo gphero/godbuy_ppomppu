@@ -49,7 +49,7 @@ def cherryPicking():
 
     pppomList = []
     # 필터
-    target_list = ['해피머니', '컬쳐랜드', '컬처랜드', '컬쳐캐쉬', '컬처캐쉬', 'happymoney', 'happy money', 'culture land','cultureland', 'culture cash', 'culturecash']
+    target_list = ['해피머니', '컬쳐랜드', '컬처랜드', '컬쳐캐쉬', '컬처캐쉬', '페이코상품권', '페이코 상품권', 'happymoney', 'happy money', 'culture land','cultureland', 'culture cash', 'culturecash']
 
     counter = 0
     _title = ''
@@ -99,121 +99,130 @@ def cherryPicking():
             _title = row[1]
             _url = row[2]
 
-            # 메시지 작성으로 이동
-            button_pos = pag.locateOnScreen('./kakaoplus_new_message.PNG')
-            print(button_pos)
-            move_and_click(button_pos)
-            time.sleep(1)
-
-            # 메시지 작성 클릭
-            button_pos = pag.locateOnScreen('./kakaoplus_message_start.PNG')
-            print(button_pos)
-            move_and_click(button_pos)
-            time.sleep(1)
-
-            # 내용입력
-            button_pos = pag.locateOnScreen('./kakaoplus_contents_input_message.PNG')
-            print(button_pos)
-            move_and_click(button_pos)
-            time.sleep(1)
-
+            # 4-1. 카톡 대화방에 입력
             pyperclip.copy(_title)
             pag.hotkey('ctrl', 'v')
-            #pag.press('enter')
-
-            # 링크입력
-            press_button('tab')
-            time.sleep(0.5)
-            press_button('right')
-            time.sleep(0.2)
-            press_button('right')
-            time.sleep(0.2)
-            press_button('right')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-
-            pyperclip.copy('GoGoGo')
-            pag.hotkey('ctrl', 'v')
-            time.sleep(1)
-            press_button('tab')
-            time.sleep(1)
+            pag.press('enter')
             pyperclip.copy(_url)
             pag.hotkey('ctrl', 'v')
+            pag.press('enter')
 
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            # 다음화면이동
-            time.sleep(0.2)
-            press_button('enter')
-
-
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            #화면최하단 이동
-            press_button('end')
-
-            #등록!
-            time.sleep(0.2)
-            press_button('enter')
-
-            # Ok버튼
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('tab')
-            time.sleep(0.2)
-            press_button('enter')
+            #4-1. 카카오플러스친구에 입력
+            # # 메시지 작성으로 이동
+            # button_pos = pag.locateOnScreen('./kakaoplus_new_message.PNG')
+            # print(button_pos)
+            # move_and_click(button_pos)
+            # time.sleep(1)
+            #
+            # # 메시지 작성 클릭
+            # button_pos = pag.locateOnScreen('./kakaoplus_message_start.PNG')
+            # print(button_pos)
+            # move_and_click(button_pos)
+            # time.sleep(1)
+            #
+            # # 내용입력
+            # button_pos = pag.locateOnScreen('./kakaoplus_contents_input_message.PNG')
+            # print(button_pos)
+            # move_and_click(button_pos)
+            # time.sleep(1)
+            #
+            # pyperclip.copy(_title)
+            # pag.hotkey('ctrl', 'v')
+            # #pag.press('enter')
+            #
+            # # 링크입력
+            # press_button('tab')
+            # time.sleep(0.5)
+            # press_button('right')
+            # time.sleep(0.2)
+            # press_button('right')
+            # time.sleep(0.2)
+            # press_button('right')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            #
+            # pyperclip.copy('GoGoGo')
+            # pag.hotkey('ctrl', 'v')
+            # time.sleep(1)
+            # press_button('tab')
+            # time.sleep(1)
+            # pyperclip.copy(_url)
+            # pag.hotkey('ctrl', 'v')
+            #
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # # 다음화면이동
+            # time.sleep(0.2)
+            # press_button('enter')
+            #
+            #
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            #
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # #화면최하단 이동
+            # press_button('end')
+            #
+            # #등록!
+            # time.sleep(0.2)
+            # press_button('enter')
+            #
+            # # Ok버튼
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('tab')
+            # time.sleep(0.2)
+            # press_button('enter')
 
             #4-1. 메시지 보냈으면 sendYn = N으로 update
             conn = sqlite3.connect("ppomList.db")

@@ -4,7 +4,7 @@ con = sqlite3.connect("ppomList.db")
 cursor = con.cursor()
 
 #ppomList 테이블이 존재하면 DROP 에서 오류
-cursor.execute("DROP TABLE ppomList")
+#cursor.execute("DROP TABLE ppomList")
 cursor.execute("CREATE TABLE ppomList(number text UNIQUE, title text, url text, sendYn text, date text)")
 #cursor.execute("INSERT INTO ppomList VALUES('1', '해피머니 25%할인!!!으아아달려으아아', 'urlurlurlurl', 'N', '2019815')")
 # cursor.execute("INSERT INTO ppomList VALUES(2, 'RuRi', 'Toronto')")
